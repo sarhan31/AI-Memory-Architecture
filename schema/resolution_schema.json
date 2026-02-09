@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "memory_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "The key of the memory item being evaluated"
+          },
+          "decision": {
+            "type": "string",
+            "enum": ["add", "update", "ignore", "merge"]
+          },
+          "reason": {
+            "type": "string",
+            "description": "Short explanation for the decision"
+          }
+        },
+        "required": ["key", "decision", "reason"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["memory_decisions"],
+  "additionalProperties": false
+}

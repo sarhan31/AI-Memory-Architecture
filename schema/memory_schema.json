@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "memories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["preference", "fact", "constraint", "commitment"]
+          },
+          "key": {
+            "type": "string",
+            "enum": [
+              "preferred_language",
+              "communication_style",
+              "call_time_preference",
+              "contact_method",
+              "timezone",
+              "notification_preference",
+              "user_name",
+              "location",
+              "occupation",
+              "education",
+              "company",
+              "device_used",
+              "no_calls_time_range",
+              "do_not_contact_days",
+              "dietary_restriction",
+              "access_limitation",
+              "budget_limit",
+              "reminder_request",
+              "scheduled_call",
+              "task_deadline",
+              "follow_up_request"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "description": "exact extracted information"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+          "action": {
+            "type": "string",
+            "enum": ["add", "update"]
+          }
+        },
+        "required": ["type", "key", "value", "confidence", "action"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["memories"],
+  "additionalProperties": false
+}
