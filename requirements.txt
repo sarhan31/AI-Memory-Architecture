@@ -4,3 +4,8 @@ python-dotenv
 faiss-cpu
 numpy
 sentence-transformers
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+httpx
