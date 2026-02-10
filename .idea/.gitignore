@@ -1,0 +1,9 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.env
+memory_manager/faiss_index.pkl
+__pycache__/
+*.pyc
+memory/
+venv/
