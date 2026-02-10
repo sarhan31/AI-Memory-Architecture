@@ -1,5 +1,3 @@
-google-genai
-openai
 python-dotenv
 faiss-cpu
 numpy
@@ -9,3 +7,8 @@ uvicorn[standard]
 pydantic
 python-multipart
 httpx
+requests
+
+# Optional LLM providers (comment out if not needed)
+# openai
+# google-genai
